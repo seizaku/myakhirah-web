@@ -9,11 +9,11 @@ export const UserInfo = () => {
         <AvatarImage src="https://creatorspace.imgix.net/users/cllytf9bi00aoqg014mnkckub/bbJMRsjEmWvglkil-New%2520Project.png?w=300&h=300" />
       </Avatar>
       <h1 className="mt-10 text-3xl font-extrabold xl:text-[42px]">
-        Framer Library
+        MyAkhirah
       </h1>
       <p className="text-md mt-4 max-w-sm leading-8 text-muted-foreground xl:max-w-md xl:text-lg xl:leading-loose">
-        A curated collection of Framer resources. [Press ⌘+D to bookmark this
-        page] Curated by Ashwin (@Ashxris)
+        Discover and support trusted charity projects, simplifying Zakat and
+        Sadaqah donations for impactful giving.
       </p>
     </div>
   );
