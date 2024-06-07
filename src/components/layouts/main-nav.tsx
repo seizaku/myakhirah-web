@@ -6,7 +6,7 @@ export const MainNav = () => (
   <nav className="hidden sm:flex">
     <ul className="flex gap-2">
       {SITE_CONFIG.mainNav.map((item) => (
-        <li>
+        <li key={item.title}>
           <Link
             href={item.href}
             className={buttonVariants({ variant: "ghost" })}
