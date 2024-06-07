@@ -5,6 +5,7 @@ const nextConfig = {
       "creatorspace.imgix.net",
       "images.ctfassets.net",
       "storage.googleapis.com",
+      "static.vecteezy.com",
     ],
   },
 };
