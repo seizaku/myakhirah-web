@@ -2,6 +2,9 @@ import prisma from "@/app/db/prisma";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { Button } from "@/components/ui/button";
 import { revalidatePath } from "next/cache";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 
 export const ProfileForm = async () => {
   const { getUser } = getKindeServerSession();
@@ -33,12 +36,15 @@ export const ProfileForm = async () => {
   });
 
   return (
-    <form action={create}>
-      <Button>Create User</Button>
-      <section className="py-12">
-        <h1 className="font-bold">User Data</h1>
-        <pre>{JSON.stringify(users, null, 2)}</pre>
-      </section>
+    <form className="mx-auto h-64 w-full max-w-lg rounded-lg border p-4">
+      <div className="flex items-center gap-4">
+        <Avatar className="h-12 w-12">
+          <AvatarFallback></AvatarFallback>
+          <AvatarImage src="" />
+        </Avatar>
+        <Input />
+      </div>
+      <Textarea rows={5} className="mt-2"></Textarea>
     </form>
   );
 };
