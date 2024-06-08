@@ -7,7 +7,7 @@ import Image from "next/image";
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import { Input } from "@/components/ui/input";
-import { TrashIcon } from "@radix-ui/react-icons";
+import { DeleteCardButton } from "@/components/delete-card";
 
 export const LinkCard = ({ item }: { item: Items }) => {
   const id = item.id;
@@ -25,7 +25,7 @@ export const LinkCard = ({ item }: { item: Items }) => {
       {...attributes}
       {...listeners}
       style={style}
-      className={`group relative min-h-44 cursor-grab touch-none rounded-3xl border bg-background p-6 transition-shadow duration-200 ease-in-out hover:drop-shadow-lg xl:max-w-[390px] ${item.thumbnail && "xl:col-span-2"}`}
+      className={`group relative h-full cursor-grab touch-none rounded-3xl border bg-background p-6 transition-shadow duration-200 ease-in-out hover:drop-shadow-lg xl:max-w-[390px] ${item.thumbnail && "xl:col-span-2"}`}
     >
       <div className="flex flex-col xl:flex-row">
         <div className="w-full text-wrap">
@@ -61,15 +61,8 @@ export const LinkCard = ({ item }: { item: Items }) => {
             />
           </div>
         )}
-        {/* <Skeleton className="hidden h-32 w-96 rounded-xl xl:block" /> */}
+        <DeleteCardButton />
       </div>
-      <Button
-        className="absolute -left-3 -top-3 rounded-full opacity-0 transition-opacity group-hover:opacity-100"
-        variant={"outline"}
-        size={"icon"}
-      >
-        <TrashIcon className="h-4 w-4" />
-      </Button>
     </div>
   );
 };
