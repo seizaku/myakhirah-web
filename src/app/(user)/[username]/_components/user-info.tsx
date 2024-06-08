@@ -13,10 +13,14 @@ export const UserInfo = ({ isLoading }: { isLoading: boolean }) => {
         <AvatarFallback></AvatarFallback>
         <AvatarImage src="https://creatorspace.imgix.net/users/cllytf9bi00aoqg014mnkckub/bbJMRsjEmWvglkil-New%2520Project.png?w=300&h=300" />
       </Avatar>
-      <h1 className="mt-10 text-3xl font-extrabold xl:text-[42px]">
+      <h1
+        className={`mt-10 text-3xl font-extrabold ${isMobileView ? "xl:text-3xl" : "xl:text-[42px]"}`}
+      >
         Seizaku.dev
       </h1>
-      <p className="text-md mt-4 max-w-sm leading-8 text-muted-foreground xl:max-w-md xl:text-lg xl:leading-loose">
+      <p
+        className={`text-md mt-4 max-w-sm leading-8 text-muted-foreground xl:max-w-md ${isMobileView ? "xl:text-md" : "xl:text-lg"} xl:leading-loose`}
+      >
         A curated collection of Framer resources. [Press ⌘+D to bookmark this
         page] Curated by Ashwin (@Ashxris)
       </p>
