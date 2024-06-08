@@ -1,4 +1,4 @@
-import prisma from "@/lib/prisma";
+import prisma from "@/db/prisma";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { Button } from "@/components/ui/button";
 import { revalidatePath } from "next/cache";
