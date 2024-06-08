@@ -25,10 +25,14 @@ model User {
 }
 
 model Project {
-  id          String @id @default(uuid()) @map("_id")
-  url         String
-  title       String
-  description String
-  userId      String
-  user        User   @relation(fields: [userId], references: [id])
+  id        String @id @default(uuid()) @map("_id")
+  order     Int
+  title     String
+  url       String
+  icon      String
+  thumbnail String
+  type      String
+  variant   String
+  userId    String
+  user      User   @relation(fields: [userId], references: [id])
 }
