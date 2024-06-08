@@ -1,7 +1,7 @@
 
 
-export type Items = {
-  id: number
+export type Item = {
+  id: string
   title: string
   url?: string
   icon?: string
