@@ -2,14 +2,14 @@
 import { Button } from "@/components/ui/button";
 import { Link2Icon } from "@radix-ui/react-icons";
 import { Skeleton } from "@/components/ui/skeleton";
-import { Items } from "@/types";
+import { Item } from "@/types";
 import Image from "next/image";
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import { Input } from "@/components/ui/input";
 import { DeleteCardButton } from "@/components/delete-card";
 
-export const LinkCard = ({ item }: { item: Items }) => {
+export const LinkCard = ({ item }: { item: Item }) => {
   const id = item.id;
   const { attributes, listeners, setNodeRef, transform, transition } =
     useSortable({ id });
