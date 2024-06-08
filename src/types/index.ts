@@ -7,6 +7,6 @@ export type Item = {
   url?: string
   icon?: string
   thumbnail?: string
-  type: "Link" | "Photo" | "Video" | "Note" | "statistics"
-  size?: "1x1" | "1x2" | "2x1" | "2x2"
+  type: "Link" | "Photo" | "Map" | "Note" | "Chart"
+  size: "1x1" | "1x2" | "2x1" | "2x2"
 }
