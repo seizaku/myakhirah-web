@@ -8,5 +8,5 @@ export type Item = {
   icon?: string
   thumbnail?: string
   type: "Link" | "Photo" | "Video" | "Note" | "statistics"
-  variant?: "sm" | "md" | "lg"
+  size?: "1x1" | "1x2" | "2x1" | "2x2"
 }

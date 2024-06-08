@@ -32,7 +32,7 @@ model Project {
   icon      String
   thumbnail String
   type      String
-  variant   String
+  size      String
   userId    String
   user      User   @relation(fields: [userId], references: [id])
 }
