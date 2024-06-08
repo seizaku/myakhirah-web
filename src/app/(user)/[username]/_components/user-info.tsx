@@ -1,4 +1,4 @@
-import prisma from "@/app/db/prisma";
+import prisma from "@/lib/prisma";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 export const UserInfo = () => {

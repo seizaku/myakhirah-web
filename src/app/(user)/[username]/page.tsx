@@ -1,4 +1,4 @@
-import prisma from "@/app/db/prisma";
+import prisma from "@/lib/prisma";
 import { Button } from "@/components/ui/button";
 import {
   MixerHorizontalIcon,
