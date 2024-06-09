@@ -12,6 +12,7 @@ import { Toggle } from "./ui/toggle";
 import { useScreenView } from "@/stores/responsive-store";
 import { useUserProfile } from "@/stores/projects-store";
 import { uuid } from "uuidv4";
+import { toast } from "@/components/ui/use-toast";
 
 export type ItemVariants = "Link" | "Photo" | "Map" | "Note" | "Chart";
 
@@ -32,7 +33,16 @@ export const BottomControl = () => {
 
   return (
     <div className="fixed inset-x-0 bottom-12 mx-auto flex h-14 w-fit items-center gap-4 rounded-3xl border bg-background/80 px-2 backdrop-blur xl:w-full xl:max-w-md">
-      <Button className="rounded-3xl text-xs shadow-md" size={"lg"}>
+      <Button
+        onClick={() => {
+          navigator.share({
+            title: "My Akhirah",
+            url: window.location.href,
+          });
+        }}
+        className="rounded-3xl text-xs shadow-md"
+        size={"lg"}
+      >
         Share
       </Button>
       <div className="h-6 w-0.5 bg-accent"></div>
@@ -49,7 +59,7 @@ export const BottomControl = () => {
         </li>
         <li>
           <Button
-            onClick={() => createCard("Photo")}
+            // onClick={() => createCard("Photo")}
             variant={"outline"}
             className="rounded-xl shadow-md"
             size={"icon"}
@@ -59,7 +69,7 @@ export const BottomControl = () => {
         </li>
         <li>
           <Button
-            onClick={() => createCard("Note")}
+            // onClick={() => createCard("Note")}
             variant={"outline"}
             className="rounded-xl shadow-md"
             size={"icon"}
@@ -69,7 +79,7 @@ export const BottomControl = () => {
         </li>
         <li>
           <Button
-            onClick={() => createCard("Map")}
+            // onClick={() => createCard("Map")}
             variant={"outline"}
             className="rounded-xl shadow-md"
             size={"icon"}
